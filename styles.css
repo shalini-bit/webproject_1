@@ -1,0 +1,269 @@
+html
+{
+    font-family: 'Quicksand', sans-serif;
+     min-height: 100vh;
+     max-width: 3000px;
+     background-color: white;
+     margin: 0 auto;
+}
+body{
+    margin: 0px; 
+    background-color: white;
+    border: 1px solid ;
+}
+
+.page-container{
+
+    margin-bottom: 70px;
+
+}
+
+
+.nav{
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav .logo img{
+
+    height: 56px;
+    width: 56px;
+    padding: 8px;
+    border-radius: 50%;
+
+}
+
+.nav .logo .title{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style: none;
+}
+.nav ul li{
+    color: white;
+    padding: 20px 40px;
+    background-color: #333333;
+}
+.nav ul li:hover{
+    background-color: #222222;
+}
+
+.nav ul li.active{
+    background-color: #222222;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+/* Tablets */
+
+@media all and  (max-width: 800px){
+    .nav{
+        justify-content: flex-start;
+    }
+    .nav ul {
+        justify-content: space-between;
+    }
+
+}
+
+/* Phones less than 600px */
+@media all and  (max-width: 600px){
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav ul li{
+        text-align: center;
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0.0;
+        top: -100px;
+    }
+    to{
+        opacity: 1.0;
+        top:0 ;
+    }
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    background-image: url(https://unsplash.it/1200/400/?blur);
+    background-size: cover;
+    background-color: #333333;
+    text-align: center;
+    
+}
+
+.banner .heading {
+    flex:1;
+    justify-self: center;
+    font-size: 3em;
+    font-weight: bold;
+    position: relative;
+    color: white;
+    animation: appear 3s ease-in-out 0s forwards;
+}
+
+.banner .heading small{
+    font-size: 24px;
+}
+
+.maintext{
+    font-size: 18px;
+    padding: 12px;
+}
+
+.subtext{
+    display: flex;
+}
+
+.subtext div{
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.subtext .red{
+    background-color: rgb(236, 81, 81);
+}
+
+.subtext .yellow{
+    background-color: rgb(189, 176, 2);
+}
+
+.subtext .green{
+    background-color: rgb(63, 179, 63);
+}
+
+h3.title{
+    font-size: 24px;
+    padding: 12px;
+    margin: 6px;
+    border-top : 5px solid #ddd;
+    border-bottom: 5px solid #ddd;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project{
+    flex-basis: 325px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin:20px;
+    border: 2px solid #d3d3d3;
+    border-radius: 10px;
+
+}
+
+.project h4{
+    font-size: 20px;
+    padding: 12px;
+    margin: 6px;
+    border-top : 5px solid #ddd;
+    border-bottom: 5px solid #ddd;
+}
+
+.project p {
+    padding: 0px 12px;
+}
+
+.project img{
+    border-radius: 10px;
+    width: 100%;
+    animation: appear 0.5s ease-in-out ;
+}
+
+.project img:hover{
+        transform: scale(0.95);
+        opacity: 0.5;
+}
+
+.project button{
+    background-color: rgb(38, 160, 38);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.project button:hover{
+    background-color: rgb(1, 102, 1);
+}
+
+.quote{
+    display: block;
+    background-color: #eeeeee;
+    padding: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.quote::before{
+    display: inline-block;
+    content: open-quote;
+    color: grey;
+    font-size: 32px;
+}
+
+.quote::after{
+    display: inline-block;
+    content: close-quote;
+    color: grey;
+    font-size: 32px;
+}
+
+.footer{
+    position: fixed;
+    left :0;
+    right :0;
+    bottom:0;
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+
+
